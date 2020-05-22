@@ -22,7 +22,7 @@ Network Devices <-> Ansible <-> Network Automation Programs
 *Please note that the libraries Ansible, Paramiko, etc. do not provide a 1:1 replacement with NSO. [NSO](https://developer.cisco.com/docs/nso/) is a network orchestration platform designed to manage devices, audit configuration, provide transaction history, and much more.*
 
 ## Installation
-This code requires Python 3 and has been tested with Python 3.7.7.
+This code requires Python 3 and has been tested with Python 3.7.7 and NSO v5.3.0.1.
 
 ```
 git clone git@github.com:CiscoDevNet/nso-wrangler.git
@@ -84,9 +84,9 @@ Audits, updates, and clears FQDN split tunneling configuration on VPN headends.
 
 **Cisco Products & Services:**
 
-- [Network Services Orchestrator (NSO)](https://developer.cisco.com/docs/nso/)
-- [Cisco ASA OS Software](https://www.cisco.com/c/en/us/products/security/adaptive-security-appliance-asa-software/index.html)
-- [AnyConnect VPN Client](https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html)
+- [Network Services Orchestrator (NSO)](https://developer.cisco.com/docs/nso/) v5.3.0.1 and Cisco ASA NED (Network Element Driver for NSO) v6.8
+- [Cisco ASA OS Software](https://www.cisco.com/c/en/us/products/security/adaptive-security-appliance-asa-software/index.html) v9.12(2)
+- [AnyConnect VPN Client](https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html) v4.8.03052
 
 **Tools & Frameworks:**
 

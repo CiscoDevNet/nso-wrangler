@@ -181,4 +181,4 @@ if __name__ == "__main__":
         console=True
     )
 
-    print(nso_wrangler.runCommandsOnDevices(DEVICES, COMMANDS))
+    nso_wrangler.runCommandsOnDevices(DEVICES, COMMANDS)
