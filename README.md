@@ -1,11 +1,11 @@
 # NSO Wrangler
 *NSO REST API Wrapper for Running Commands on Devices*
 
-This repo contains an API designed to make it easier to perform device commands using NSO's REST API.
+This repo contains an API designed to make it easier to perform device commands using [Network Services Orchestrator (NSO)](https://developer.cisco.com/docs/nso/) REST API.
 
 I've included specific examples on how to utilize `NSO Wrangler` for your network's specific needs by using it as a parent class, although the `NSO Wrangler` class can work as a standalone.
 - [Poller](./poller/) - Pulls VPN session data to monitor ASA device health.
-- [Split Tunnel Manager](./split-tunnel-manager/) - Audits, manages, and clears FQDN split tunnels on ASAs.
+- [Split Tunnel Manager](./split_tunnel_manager/) - Audits, manages, and clears FQDN split tunnels on ASAs.
 
 These programs also provide a good template for network automation regardless if the developer has access to an NSO server. Simply replace the `NSO Wrangler` API with an alternative networking automation library such as Ansible or Paramiko.
 
@@ -69,12 +69,15 @@ Runs the given commands on the devices (declared above):
 nso_wrangler.runCommandsOnDevices(DEVICES, COMMANDS)
 ```
 
-Please view the READMEs for [poller](./poller/README.md) and [split-tunnel-manager](./split-tunnel-manager/README.md) for further expansion on how to utilize NSO Wrangler.
+Please view the READMEs for [`poller`](./poller/README.md) and [`split_tunnel_manager`](./split_tunnel_manager/README.md) for further expansion on how to utilize NSO Wrangler.
+
+## Tutorial using Cisco DevNet
+If you don't have access to NSO, test it out with this [tutorial](./DEVNET_TUTORIAL.md) which utilizes Cisco DevNet's sandbox environment.
 
 ## [Poller](./poller/)
 Pulls and clears VPN session DB data. Also can disconnect VPN sessions.
 
-## [Split Tunnel Manager](./split-tunnel-manager/)
+## [Split Tunnel Manager](./split_tunnel_manager/)
 Audits, updates, and clears FQDN split tunneling configuration on VPN headends.
 
 ## Technologies & Frameworks Used
@@ -99,7 +102,7 @@ Audits, updates, and clears FQDN split tunneling configuration on VPN headends.
 |   ├── poller.py (main program and a code explanation on how to use the API)
 |   ├── reports (all reports for poller.py are sent here)
 |   └── logs (all logging for poller.py is sent here)
-├── split-tunnel-manager (example program)
+├── split_tunnel_manager (example program)
 |   ├── split_tunnel_manager.py (main program and a code explanation on how to use the API)
 |   ├── reports (all reports for split_tunnel_manager.py are sent here)
 |   └── logs (all logging for poller.py is sent here)

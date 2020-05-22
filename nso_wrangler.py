@@ -49,7 +49,7 @@ class NSOWrangler:
         self.nso_port = nso_port
         self.username = username
         self.password = password
-        self.base_api_url = f"https://{self.nso_server}:{self.nso_port}/api/operational/devices/device"
+        self.base_api_url = f"https://{self.nso_server}:{self.nso_port}/restconf/operations/devices"
 
         self.console = console
 
@@ -120,9 +120,9 @@ class NSOWrangler:
         self.logger.info(f"{device}:\tPerforming the following commands: {commands}.")
 
         command_string = '\n'.join(commands)
-        url = f"{self.base_api_url}/{device}/live-status/asa-stats:exec/_operations/any"
+        url = f"{self.base_api_url}/device={device}/live-status/tailf-ned-cisco-asa-stats:exec/any"
         payload = json.dumps({ "input": { "args": command_string }})
-        headers = { "Content-Type": "application/vnd.yang.operation+json" }
+        headers = { "Content-Type": "application/yang-data+json" }
 
         try:
             response = requests.request(
@@ -166,12 +166,12 @@ if __name__ == "__main__":
     print("\nnso_wrangler.py\n")
 
     NSO_SERVER = 'nso-server'
-    NSO_PORT = '8888'
+    NSO_PORT = '8080'
     USERNAME = 'user1'
     PASSWORD = 'pass1'
 
     DEVICES = ['vpn-device-1', 'vpn-device-2']
-    COMMANDS = ['show vpn-sessiondb', 'show vpn load-balancing']
+    COMMANDS = ['show run route']
 
     nso_wrangler = NSOWrangler(
         nso_server=NSO_SERVER,
@@ -181,4 +181,4 @@ if __name__ == "__main__":
         console=True
     )
 
-    nso_wrangler.runCommandsOnDevices(DEVICES, COMMANDS)
+    print(nso_wrangler.runCommandsOnDevices(DEVICES, COMMANDS))
