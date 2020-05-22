@@ -41,14 +41,14 @@ The following constants are declared in `"__main__"` of [nso_wrangler.py](./nso_
 
 ```
 NSO_SERVER = 'nso-server'  # NSO server address
-NSO_PORT = '8888'          # NSO server port
+NSO_PORT = '8080'          # NSO server port
 USERNAME = 'user1'         # username for NSO
 PASSWORD = 'pass1'         # password for NSO
 
 # List of device hostnames within NSO
 DEVICES = ['vpn-device-1', 'vpn-device-2']
 # Commands to be run on devices
-COMMANDS = ['show vpn-sessiondb', 'show vpn load-balancing']
+COMMANDS = ['show run route']
 ```
 
 Instantiation of the NSO Wrangler class:
