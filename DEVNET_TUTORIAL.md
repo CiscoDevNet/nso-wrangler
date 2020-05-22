@@ -181,7 +181,7 @@ anyconnect-custom-data dynamic-split-include-domains default_group_policy_includ
  anyconnect-custom dynamic-split-include-domains value default_group_policy_include
 ```
 
-9. Finished! To build out this network automation further, we can have a master list of the include and exclude domains on a server and have this script pulled from there. Furthermore, we can set up chron jobs to run audits on our network devices to make sure they're compliant and whenever our include and exclude domains are updated, our split tunnel manager package will automatically update all devices in the network.
+9. Finished! To build out this network automation further, we can have a master list (or DB) of the include and exclude domains on a server and have this script pull the domain info from there. Furthermore, we can set up chron jobs to run audits on our network devices to make sure they're compliant and whenever our include and exclude domains are updated, our split tunnel manager package will automatically update all devices in the network.
 
 ## Authors & Maintainers
 - Drew Taylor <dretaylo@cisco.com>
