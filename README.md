@@ -1,7 +1,11 @@
 # NSO Wrangler
 *NSO REST API Wrapper for Running Commands on Devices*
 
-This repo contains an API designed to make it easier to perform device commands using [Network Services Orchestrator (NSO)](https://developer.cisco.com/docs/nso/) RESTCONF API.
+This repo contains an API designed to perform device commands using [Network Services Orchestrator (NSO)](https://developer.cisco.com/docs/nso/) RESTCONF API.
+
+As a refute to quick and dirty scripting, `NSO Wrangler` cleans the request process to NSO by providing a wrapper that allows network engineers to interface with network devices in a familiar manner - the device configuration - rather than having to worry about how to properly formulate a request.
+
+If you do not have access to NSO or want to learn more about NSO please view this [tutorial](./DEVNET_TUTORIAL.md) that utilizes Cisco Devnet's Sandbox Environment to provide a demo NSO instance.
 
 I've included specific examples on how to utilize `NSO Wrangler` for your network's specific needs by using it as a parent class, although the `NSO Wrangler` class can work as a standalone.
 - [Poller](./poller/) - Pulls VPN session data to monitor ASA device health.
